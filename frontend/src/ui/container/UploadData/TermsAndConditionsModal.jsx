@@ -140,7 +140,7 @@ const TermsAndConditionModal = ({ open, handleMenuTypeClick }) => {
               md={4}
               lg={3}
               xl={3}
-              className={classes.flexEnd}
+            //  className={classes.flexEnd}
             >
               <Button
                 // disabled={!isChecked}
