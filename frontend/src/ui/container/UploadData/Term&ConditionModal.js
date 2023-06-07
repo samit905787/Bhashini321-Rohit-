@@ -14,7 +14,8 @@ export default function AlertDialog({ onClose, handleMenuTypeClick }) {
   const [isDisabled, setIsDisabled] = useState(true);
 
   const handleClick = () => {
-    setIsDisabled(false);
+    // setIsDisabled(false);
+    setIsDisabled(!isDisabled);
 
   }
   console.log("checking modal");
