@@ -32,42 +32,41 @@ router.post(
     },
   ]),
   async function (req, res, next) {
-   try{ const {
-      
-      organizationName,
-      officerName,
-      designation,
-      emailId,
-      contactNumber,
-    } = req.body;
-
-    const files = [];
-
-    if (req.files.file) {
-      const newFile = new File({
-        path: req.files.file[0].path,
-        originalname: req.files.file[0].originalname,
-      
+    try {
+      const {
+        ID,
         organizationName,
         officerName,
         designation,
         emailId,
         contactNumber,
-      });
-      newFile.readmeText =req.files.readmeText[0].filename
-      const file = await File.addFile(newFile);
-      files.push(file);
+        isIndividual,
+      } = req.body;
+
+      const files = [];
+
+      if (req.files.file) {
+        const newFile = new File({
+          path: req.files.file[0].path,
+          mediaFile: req.files.file[0].originalname,
+          ID,
+          organizationName,
+          officerName,
+          designation,
+          emailId,
+          contactNumber,
+          isIndividual,
+        });
+        newFile.readmeText = req.files.readmeText[0].filename;
+        const file = await File.addFile(newFile);
+        files.push(file);
+      }
+
+      res.send(files);
+    } catch (err) {
+      await unlinkAsync(req.file.path);
+      res.status(400).send({ succes: false, msg: err.message });
     }
-
-   
-
-    res.send(files);
-  }catch(err){
-    await unlinkAsync(req.file.path);
-    res.status(400).send({ succes: false, msg: err.message });
-
-    
-  }
   }
 );
 

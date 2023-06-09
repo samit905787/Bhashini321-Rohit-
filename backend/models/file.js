@@ -6,7 +6,11 @@ const fileSchema = mongoose.Schema({
   //   required: true,
   //   trim: true,
   // },
-  originalname: {
+ isIndividual:{
+  type: Number,
+  required: false,
+ },
+  mediaFile: {
     type: String,
     required: true,
   },

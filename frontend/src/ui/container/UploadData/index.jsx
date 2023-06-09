@@ -255,6 +255,7 @@ const UploadData = (props) => {
     formData.append("designation", userDetails?.designation);
     formData.append("emailId", userDetails?.emailId);
     formData.append("contactNumber", userDetails?.contactNumber);
+    
 
     console.log(formData);
 

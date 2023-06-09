@@ -1,8 +1,10 @@
 const organizationDetail = require("../models/Organisation");
+const File = require("../models/file");
 const User = require("../models/User");
 const JWT = require("../utils/JWT.js");
 const saltRounds = 10;
 const bcrypt = require('bcrypt');
+const ObjectId = require("mongoose").Types.ObjectId;
 
 const securePassword = (password) =>
   bcrypt
@@ -106,8 +108,25 @@ const userLogin = async (req, res) => {
 
 };
 
+///
+const getfileDetails= async (req, res) => {
+  try {
+ 
+  const user = await File.find(new ObjectId(req.params.id))
+    if (user) {
+      res.json(user);
+    } else {
+      res.status(404).json({ error: 'User not found' });
+    }
+  } catch (err) {
+    console.error('Error retrieving user:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
 
 module.exports = {
   createUser,
   userLogin,
+  getfileDetails
 };
