@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fdd7ca3e.chunk.css",
+    "main.js": "/static/js/main.aa97af23.chunk.js",
+    "main.js.map": "/static/js/main.aa97af23.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9c21a2e5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9c21a2e5.js.map",
+    "static/js/2.5965d8df.chunk.js": "/static/js/2.5965d8df.chunk.js",
+    "static/js/2.5965d8df.chunk.js.map": "/static/js/2.5965d8df.chunk.js.map",
+    "static/js/3.0126adf1.chunk.js": "/static/js/3.0126adf1.chunk.js",
+    "static/js/3.0126adf1.chunk.js.map": "/static/js/3.0126adf1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.fdd7ca3e.chunk.css.map": "/static/css/main.fdd7ca3e.chunk.css.map",
+    "static/js/2.5965d8df.chunk.js.LICENSE.txt": "/static/js/2.5965d8df.chunk.js.LICENSE.txt",
+    "static/media/Bhashini_en.269a4710.svg": "/static/media/Bhashini_en.269a4710.svg",
+    "static/media/DataDaan.91f5384e.png": "/static/media/DataDaan.91f5384e.png",
+    "static/media/DataDaan.f2b54b5c.svg": "/static/media/DataDaan.f2b54b5c.svg",
+    "static/media/LoginLogo.d4c34aa1.png": "/static/media/LoginLogo.d4c34aa1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9c21a2e5.js",
+    "static/js/2.5965d8df.chunk.js",
+    "static/css/main.fdd7ca3e.chunk.css",
+    "static/js/main.aa97af23.chunk.js"
+  ]
+}
