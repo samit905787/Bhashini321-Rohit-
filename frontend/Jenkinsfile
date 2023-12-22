@@ -12,7 +12,6 @@ stages {
     stage('checkout') {
         steps {
             checkout scmGit(branches: [[name: '*/datadaan']], extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'frontend']], userRemoteConfigs: [[url: 'https://github.com/samit905787/Bhashini321-Rohit-.git']])
-            }
     }
 
     stage ('build image') {
