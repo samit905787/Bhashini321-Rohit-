@@ -1,6 +1,6 @@
 ﻿#Stage 1
 FROM node:12.18.3 as build
-WORKDIR /datadaan
+WORKDIR /datadaanfrontend
 COPY package.json .
 RUN npm install
 COPY . .
