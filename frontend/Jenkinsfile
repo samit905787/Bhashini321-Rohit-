@@ -1,5 +1,5 @@
 pipeline {
-     agent {lable "test-server"}
+     agent any
         environment {
         registryName = "testdatadaanrepo"
         registryUrl = "testdatadaanrepo.azurecr.io"
